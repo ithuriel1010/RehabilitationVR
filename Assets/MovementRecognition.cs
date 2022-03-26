@@ -60,7 +60,8 @@ public class MovementRecognition : MonoBehaviour
         isMoving = true;
         positionList.Clear();
         positionList.Add(movementSource.position);
-        Destroy(Instantiate(debugCubePrefab, movementSource.position, Quaternion.identity), 3);
+        //Destroy(Instantiate(debugCubePrefab, movementSource.position, Quaternion.identity), 3);
+        Instantiate(debugCubePrefab, movementSource.position, Quaternion.identity);
     }
 
     public void EndMovement()
@@ -95,38 +96,5 @@ public class MovementRecognition : MonoBehaviour
             Destroy(Instantiate(debugCubePrefab, movementSource.position, Quaternion.identity), 3);
         }
 
-    }
-
-    public static bool InsidePolygon(Vector2 target, Vector2[] poly)
-    {
-        Vector2 p1, p2;
-        bool result = false;
-        //return false if this is not an actual polygon
-        if (poly.Length < 3) return result;
-
-        Vector2 oldV = new Vector2(poly[poly.Length - 1].x, poly[poly.Length - 1].y);
-        for (int i = 0; i < poly.Length; i++)
-        {
-            Vector2 newV = new Vector2(poly[i].x, poly[i].y);
-            if (newV.x > oldV.x)
-            {
-                p1 = oldV;
-                p2 = newV;
-            }
-            else
-            {
-                p1 = newV;
-                p2 = oldV;
-            }
-            if ((newV.x < target.x) == (target.x <= oldV.x))
-            {
-                if ((target.y - p1.y) * (p2.x - p1.x) < (p2.y - p1.y) * (target.x - p1.x))
-                {
-                    result = !result;
-                }
-            }
-            oldV = newV;
-        }
-        return result;
     }
 }
