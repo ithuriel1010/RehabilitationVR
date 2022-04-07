@@ -60,8 +60,8 @@ public class MovementRecognition : MonoBehaviour
         isMoving = true;
         positionList.Clear();
         positionList.Add(movementSource.position);
-        //Destroy(Instantiate(debugCubePrefab, movementSource.position, Quaternion.identity), 3);
-        Instantiate(debugCubePrefab, movementSource.position, Quaternion.identity);
+        Destroy(Instantiate(debugCubePrefab, movementSource.position, Quaternion.identity), 3);
+        //Instantiate(debugCubePrefab, movementSource.position, Quaternion.identity);
     }
 
     public void EndMovement()
