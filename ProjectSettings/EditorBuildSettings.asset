@@ -6,17 +6,17 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/Martina.unity
-    guid: d5cc7986a7d80144d9c7d98818ac984d
-  - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 374e6fba6b59f6943bec54f095ff357d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/OurScene.unity
     guid: 1c0fc8dbc7174ff41a354f084a3e3436
   - enabled: 1
-    path: Assets/Wynik.unity
+    path: Assets/Scenes/Wynik.unity
     guid: 1df44e9f0fed97548beb7ab973c4d10c
+  - enabled: 0
+    path: Assets/Scenes/Martina.unity
+    guid: d5cc7986a7d80144d9c7d98818ac984d
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 70cc98ca144671648a358d931098ef45, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 6c921c7b2ea7b764891cbe66315d6985, type: 2}

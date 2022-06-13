@@ -52,7 +52,7 @@ public class BodyCollision : MonoBehaviour
         keepTiming = false;
 
         UpdateDatabase();
-        SceneManager.LoadScene(2);
+        SceneManager.LoadScene("Wynik");
     }
 
     /*IEnumerator time()

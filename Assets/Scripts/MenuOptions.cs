@@ -25,7 +25,7 @@ public class MenuOptions : MonoBehaviour
     {
         var scene = SceneManager.GetActiveScene().buildIndex;
 
-        if(scene ==2)
+        if(scene == 2)
         {
             ReadDB();
             GetCurrentScore();
